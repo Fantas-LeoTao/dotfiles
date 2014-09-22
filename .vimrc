@@ -56,3 +56,7 @@ filetype plugin indent on
 
 "set nerdtree
 map <F3> :NERDTreeToggle<CR>
+
+"use pathogen to excute pep8
+execute pathogen#infect()
+

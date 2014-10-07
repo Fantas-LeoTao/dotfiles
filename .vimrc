@@ -40,14 +40,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" let Vundle manage
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
-"solarized 主题,额，貌似失败了
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-scripts/taglist.vim'
-Plugin 'kien/rainbow_parentheses.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()

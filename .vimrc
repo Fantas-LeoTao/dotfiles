@@ -1,8 +1,10 @@
 syntax on
 set nu
+
+"设置配色主题
+syntax enable
 set background=light
-"编辑模式下右下角显示当前的行号列号
-set ruler
+colorscheme solarized
 
 "对齐
 set autoindent
@@ -29,10 +31,13 @@ set nocompatible
 "为方便复制，用<F2>开启/关闭行号显示
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 
-"粘贴模式
-set pastetoggle=<F12>
+"set nerdtree
+map <F3> :NERDTreeToggle<CR>
 
-"检测文件类型关闭
+"use pathogen to excute autopep8
+execute pathogen#infect()
+
+"following:use Vundle to manage plugins!
 filetype off
 
 " set the runtime path to include Vundle and initialize
@@ -42,17 +47,11 @@ call vundle#begin()
 
 " let Vundle manage
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
 
 filetype plugin indent on 
-
-"set nerdtree
-map <F3> :NERDTreeToggle<CR>
-
-"use pathogen to excute pep8
-execute pathogen#infect()
 

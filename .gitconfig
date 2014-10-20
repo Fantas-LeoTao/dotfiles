@@ -1,0 +1,12 @@
+[user]
+    name = Fool-LeoTao
+    email = leotao19930820@gmail.com
+[color]
+    ui = auto
+    diff = auto
+[alias]
+    ck = checkout
+    br = branch
+    cm = commit
+    st = status
+    df = diff

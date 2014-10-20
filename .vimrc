@@ -1,6 +1,9 @@
 syntax on
 set nu
 
+"行号和列号
+set ruler
+
 "设置配色主题
 syntax enable
 set background=light

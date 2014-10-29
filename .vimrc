@@ -27,6 +27,7 @@ set shiftwidth=4
 
 "tab设置为4
 set tabstop=4
+set expandtab
 
 "去掉有关vi一致性模式，避免以前版本的bug和局限
 set nocompatible

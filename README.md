@@ -9,3 +9,5 @@ https://github.com/Valloric/YouCompleteMe
 https://github.com/scrooloose/nerdtree
 
 https://github.com/kevinw/pyflakes-vim
+
+https://github.com/nvie/vim-flake8

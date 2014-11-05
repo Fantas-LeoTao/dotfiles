@@ -38,7 +38,7 @@ nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 "set nerdtree
 map <F3> :NERDTreeToggle<CR>
 
-"use pathogen to excute autopep8
+"use pathogen to excute pyflakes and flake8
 execute pathogen#infect()
 let g:flake8_max_line_length=108
 

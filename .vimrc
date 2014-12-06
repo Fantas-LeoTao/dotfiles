@@ -40,7 +40,7 @@ map <F3> :NERDTreeToggle<CR>
 
 "use pathogen to excute pyflakes and flake8
 execute pathogen#infect()
-let g:flake8_max_line_length=108
+let g:flake8_max_line_length=80
 
 "following:use Vundle to manage plugins!
 filetype off

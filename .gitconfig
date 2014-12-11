@@ -10,3 +10,4 @@
     cm = commit
     st = status
     df = diff
+    rb = rebase

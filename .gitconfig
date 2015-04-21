@@ -1,6 +1,8 @@
 [user]
     name = Fool-LeoTao
     email = leotao19930820@gmail.com
+[core]
+    editor = /usr/local/bin/vim
 [color]
     ui = auto
     diff = auto

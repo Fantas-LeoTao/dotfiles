@@ -13,3 +13,4 @@
     st = status
     df = diff
     rb = rebase
+    ss = stash

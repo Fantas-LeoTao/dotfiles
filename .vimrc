@@ -6,7 +6,7 @@ set ruler
 
 "设置配色主题
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 "对齐
@@ -33,7 +33,8 @@ set expandtab
 set nocompatible
 
 "为方便复制，用<F2>开启/关闭行号显示
-nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+"nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+map <F2> :set nonumber!<CR>
 
 "set nerdtree
 map <F3> :NERDTreeToggle<CR>
@@ -54,6 +55,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -67,4 +69,16 @@ fun! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e
     call cursor(l, c)
 endfun
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,go,ruby,python,yaml autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+" go settings
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)

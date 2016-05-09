@@ -16,6 +16,9 @@ set smartindent
 "高亮搜索结果
 set hlsearch
 
+"光标竖线
+set cursorcolumn
+
 "快速匹配      
 set incsearch 
 

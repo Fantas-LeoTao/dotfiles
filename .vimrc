@@ -1,5 +1,6 @@
 syntax on
 set nu
+set relativenumber
 
 "行号和列号
 set ruler

@@ -10,9 +10,10 @@ alias gitdelmergedbr='git branch --merged | egrep -v "(^\*|master|dev)" | xargs 
 # cp /usr/local/bin/mvim /usr/local/bin/vim
 # alias vim='mvim -v'
 
-# if [ -f `brew --prefix`/etc/bash_completion ]; then
-#     . `brew --prefix`/etc/bash_completion
-# fi
+# https://github.com/scop/bash-completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
 
 # use gnu ls instead BSD ls
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"

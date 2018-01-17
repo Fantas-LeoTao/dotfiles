@@ -1,9 +1,10 @@
 syntax on
 set nu
 set relativenumber
-
-"行号和列号
+set noswapfile
 set ruler
+set cursorline
+set cursorcolumn
 
 "设置配色主题
 syntax enable
@@ -16,9 +17,6 @@ set smartindent
 
 "高亮搜索结果
 set hlsearch
-
-"光标竖线
-set cursorcolumn
 
 "快速匹配      
 set incsearch 
@@ -33,15 +31,9 @@ set shiftwidth=4
 set tabstop=4
 set expandtab
 
-"去掉有关vi一致性模式，避免以前版本的bug和局限
-set nocompatible
-
 "root权限保存
 cmap w!! w !sudo tee > /dev/null %
 
-map <F2> :set nonumber!<CR>
-
-"set nerdtree
 map <F3> :NERDTreeToggle<CR>
 
 "use pathogen to excute pyflakes and flake8
@@ -50,8 +42,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_always_populate_loc_list = 0 
+let g:syntastic_auto_loc_list = 0 
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers = ['flake8']
@@ -70,6 +62,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/vim-go'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()
